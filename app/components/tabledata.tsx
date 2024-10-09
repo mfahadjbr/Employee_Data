@@ -1,15 +1,24 @@
 import Link from "next/link";
-//import { getEmployeelist } from "@/lib/action";
 import { getData } from "@/lib/action";
 import { formatDate } from "@/lib/utils";
 import { DeleteButton } from "@/app/components/delete";
+
+// Define the expected employee type
+type Employee = {
+  id: string;
+  name: string;
+  email: string;
+  phone: string;
+  createdAt: Date;
+};
 
 const Employee = async ({
   query,
 }: {
   query: string;
 }) => {
-  const employees = await getData(query);
+  // Fetch employees based on the query
+  const employees: Employee[] = await getData(query);
 
   return (
     <div className="w-full overflow-x-auto">

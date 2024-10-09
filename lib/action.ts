@@ -42,7 +42,7 @@ export const saveEmployee = async (
   redirect("/employee");
 };
 
-export const getEmployeelist = async (query: string) => {
+export const getEmployeelist = async () => {
   try {
     const employees = await prisma.employee.findMany({
       select: {
