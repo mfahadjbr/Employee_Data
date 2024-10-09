@@ -2,7 +2,6 @@ import Link from "next/link";
 import TableData from "@/app/components/tabledata";
 import { Suspense } from "react";
 import { Spinner } from "@/app/components/spinner";
-import Employee from './components/tabledata';
 
 const Home = async ({
   searchParams,
