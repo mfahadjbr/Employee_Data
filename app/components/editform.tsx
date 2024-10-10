@@ -12,7 +12,7 @@ const UpdateForm = ({ employee }: { employee: Employee }) => {
     <div>
       <form action={formAction}>
         <div className="mb-5">
-          <label htmlFor="name" className="block text-sm font-medium text-white mb-1">
+          <label htmlFor="name" className="block text-sm font-medium text-gray-400 mb-1">
             Full Name
           </label>
           <input
@@ -28,7 +28,7 @@ const UpdateForm = ({ employee }: { employee: Employee }) => {
           </div>
         </div>
         <div className="mb-5">
-          <label htmlFor="email" className="block text-sm font-medium text-white mb-1">
+          <label htmlFor="email" className="block text-sm font-medium text-gray-400 mb-1">
             Email
           </label>
           <input
@@ -44,7 +44,7 @@ const UpdateForm = ({ employee }: { employee: Employee }) => {
           </div>
         </div>
         <div className="mb-5">
-          <label htmlFor="phone" className="block text-sm font-medium text-white mb-1">
+          <label htmlFor="phone" className="block text-sm font-medium text-gray-400 mb-1">
             Phone Number
           </label>
           <input

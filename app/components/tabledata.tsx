@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { getData } from "@/lib/action";
 import { formatDate } from "@/lib/utils";
-import { DeleteButton } from "@/app/components/delete";
+
 
 // Define the expected employee type
 type Employee = {
@@ -50,7 +50,7 @@ const Employee = async ({
                 >
                   Edit
                 </Link>
-                <DeleteButton id={rs.id} />
+               
               </td>
             </tr>
           ))}

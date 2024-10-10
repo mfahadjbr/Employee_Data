@@ -13,7 +13,7 @@ const UpdateEmployeePage = async ({ params }: { params: { id: string } }) => {
   
     return (
     <div className="max-w-md mx-auto mt-5">
-      <h1 className="text-2xl mb-8 text-white font-bold">Update Employee</h1>
+      <h1 className="text-2xl mb-8 text-gray-400 font-bold">Update Employee</h1>
         <UpdateForm employee={employee} />
     </div>
   );

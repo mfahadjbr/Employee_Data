@@ -7,11 +7,11 @@ const CreateEmployeePage = () => {
     const [state, formAction] = useFormState(saveEmployee, null);
     return (
     <div className="max-w-md mx-auto mt-7">
-        <h1 className="text-2xl mb-8 text-white font-bold ">Add New Employee</h1>
+        <h1 className="text-2xl mb-8 text-gray-400 font-bold">Add New Employee</h1>
         <div>
         <form action={formAction}>
         <div className="mb-5">
-          <label htmlFor="name" className="block text-sm font-medium text-white mb-1">
+          <label htmlFor="name" className="block text-sm font-medium text-gray-400 mb-1">
             Full Name
           </label>
           <input
@@ -26,7 +26,7 @@ const CreateEmployeePage = () => {
           </div>
         </div>
         <div className="mb-5">
-          <label htmlFor="email" className="block text-sm font-medium text-white mb-1">
+          <label htmlFor="email" className="block text-sm font-medium text-gray-400 mb-1">
             Email
           </label>
           <input
@@ -42,7 +42,7 @@ const CreateEmployeePage = () => {
         </div>
         <div className="mb-5">
           <label
-            htmlFor="phone" className="block text-sm font-medium text-white mb-1">
+            htmlFor="phone" className="block text-sm font-medium text-gray-400 mb-1">
             Phone Number
           </label>
           <input
