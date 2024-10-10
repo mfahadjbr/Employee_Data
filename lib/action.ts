@@ -53,7 +53,7 @@ export const getEmployeelist = async () => {
         createdAt: true,
       },
       orderBy: {
-        createdAt: "desc",
+        createdAt: "asc",
       },
     });
     return employees;
@@ -61,6 +61,24 @@ export const getEmployeelist = async () => {
     throw new Error("Failed to fetch employees data"); // Removed 'error' variable
   }
 };
+
+// export const getData = async (query: string) => {
+//   try {
+//     const employees = await prisma.employee.findMany({
+//       where: {
+//         name: {
+//           contains: query,
+//         },
+//       },
+//       orderBy: {
+//         createdAt: "asc",
+//       },
+//     });
+//     return employees;
+//   } catch {
+//     throw new Error("Failed to fetch employees data"); // Removed 'error' variable
+//   }
+// };
 
 export const getData = async (query: string) => {
   try {
@@ -71,12 +89,21 @@ export const getData = async (query: string) => {
         },
       },
       orderBy: {
-        createdAt: "desc",
+        createdAt: "asc",
       },
     });
-    return employees;
+
+    // Convert 'createdAt' to GMT+5
+    const employeesWithFormattedDate = employees.map((employee: { createdAt: Date }) => ({
+      ...employee,
+      createdAt: new Date(employee.createdAt).toLocaleString("en-US", {
+        timeZone: "Asia/Karachi", // GMT+5 (Asia/Karachi)
+      }),
+    }));
+
+    return employeesWithFormattedDate;
   } catch {
-    throw new Error("Failed to fetch employees data"); // Removed 'error' variable
+    throw new Error("Failed to fetch employees data");
   }
 };
 
